@@ -21,7 +21,6 @@ class CashRegister
     else
       @items << item 
     end
-    @final_payment = price * quantity
   end
   
   def apply_discount
