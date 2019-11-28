@@ -11,6 +11,7 @@ class CashRegister
   
   def add_item(item, price, quantity = 1)
     @price = price
+    @last_transaction = quantity * price
     @total +=  quantity * price
       if quantity > 1 
         counter = 0 
@@ -34,7 +35,7 @@ class CashRegister
   end 
   
   def void_last_transaction
-    @total = @total - @final_payment
+    @total = @total - @last_transaction
   end 
   
   
